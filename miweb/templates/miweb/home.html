@@ -1,76 +1,76 @@
+{% extends 'miweb/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Edward Navarro</title>
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
-        <!-- Incluye Bootstrap si lo estás usando -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    </head>
-    <body>
 
-        <!-- Encabezado -->
-        <header class="page-header" style="background-image: url('{% static 'img/antoine-barres.jpg' %}')">
-            <div class="container">
-                <div class="title-brand text-center">
-                    <div class="main-logo mb-3">
-                        <img src="{% static 'img/angular2-logo.png' %}" alt="">
-                    </div>
-                    <h1 class="main-title">Edward Navarro</h1>
+{% block title %}Inicio - Edward Navarro{% endblock %}
 
-                    <div class="fog-low">
-                        <img src="{% static 'img/fog-low.png' %}" alt="">
-                    </div>
-                    <div class="fog-low right">
-                        <img src="{% static 'img/fog-low.png' %}" alt="">
-                    </div>
-                </div>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 
-                <p class="description-subtitle text-center mt-3">
-                    Ingeniero Electrónico y de Telecomunicaciones con conocimientos en tecnologías de la información, automatización y control de sistemas electrónicos, desarrollo software, gestión de redes y servicios de Telecomunicaciones, gestión de proyectos empresariales.
-                </p>
+{% block content %}
+
+<!-- Encabezado -->
+<header class="page-header" style="background-image: url('{% static 'img/antoine-barres.jpg' %}')">
+    <div class="container">
+        <div class="title-brand text-center">
+            <div class="main-logo mb-3">
+                <img src="{% static 'img/angular2-logo.png' %}" alt="">
             </div>
+            <h1 class="main-title">Edward Navarro</h1>
 
-            <div class="moving-clouds" style="background-image: url('{% static 'img/clouds.png' %}');"></div>
-        </header>
-
-        <!-- Contenido principal -->
-        <main>
-            <div class="container py-5">
-                <!-- Sobre mí -->
-                <section class="section mb-5 text-center">
-                    <div class="profile-picture scroll-fade mb-4 ">
-                        <img src="{% static 'img/perfil.png' %}" alt="">
-                    </div>
-                    <h2 class="section-description__title">Sobre mí</h2>
-                    <p class="section-description__paragph">
-                        Me considero una persona responsable, respetuoso, adaptable a los cambios, con capacidad de liderazgo, adecuadas relaciones interpersonales para el trabajo en equipo, decidido al cumplimiento de mis metas, capaz de mantener un aprendizaje continuo y abierto a opiniones que me hagan mejorar no solo como profesional sino como persona.
-                    </p>
-                </section>
-
-                <!-- Tarjetas -->
-                <section class="section cards d-flex flex-wrap justify-content-center gap-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <i class="icon icon-award-48"></i>
-                            <h3 class="card-title">Estudios</h3>
-                            <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
-                            <a href="#" class="btn btn-outline-danger">Ver más</a>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <i class="icon icon-briefcase-24"></i>
-                            <h3 class="card-title">Portafolio</h3>
-                            <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
-                            <a href="#" class="btn btn-outline-danger">Ver más</a>
-                        </div>
-                    </div>
-                </section>
+            <div class="fog-low">
+                <img src="{% static 'img/fog-low.png' %}" alt="">
             </div>
-        </main>
-        <script src="{% static 'js/home.js' %}"></script>
-    </body>
-</html>
+            <div class="fog-low right">
+                <img src="{% static 'img/fog-low.png' %}" alt="">
+            </div>
+        </div>
+
+        <p class="description-subtitle text-center mt-3">
+            Ingeniero Electrónico y de Telecomunicaciones con conocimientos en tecnologías de la información, automatización y control de sistemas electrónicos, desarrollo software, gestión de redes y servicios de Telecomunicaciones, gestión de proyectos empresariales.
+        </p>
+    </div>
+
+    <div class="moving-clouds" style="background-image: url('{% static 'img/clouds.png' %}');"></div>
+</header>
+
+<!-- Contenido principal -->
+<div class="container py-5">
+    <!-- Sobre mí -->
+    <section class="section mb-5 text-center">
+        <div class="profile-picture scroll-fade mb-4 ">
+            <img src="{% static 'img/perfil.png' %}" alt="">
+        </div>
+        <h2 class="section-description__title">Sobre mí</h2>
+        <p class="section-description__paragph">
+            Me considero una persona responsable, respetuoso, adaptable a los cambios, con capacidad de liderazgo, adecuadas relaciones interpersonales para el trabajo en equipo, decidido al cumplimiento de mis metas, capaz de mantener un aprendizaje continuo y abierto a opiniones que me hagan mejorar no solo como profesional sino como persona.
+        </p>
+    </section>
+
+    <!-- Tarjetas -->
+    <section class="section cards d-flex flex-wrap justify-content-center gap-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <i class="icon icon-award-48"></i>
+                <h3 class="card-title">Estudios</h3>
+                <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
+                <a href="#" class="btn btn-outline-danger">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <i class="icon icon-briefcase-24"></i>
+                <h3 class="card-title">Portafolio</h3>
+                <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
+                <a href="#" class="btn btn-outline-danger">Ver más</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
