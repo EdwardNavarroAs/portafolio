@@ -16,3 +16,16 @@ h1, h2, h3, h4 {
 p {
     margin-bottom: 1rem;
 }
+
+/*estilos de los botones*/
+.btn-outline-danger{
+    color: #f13a19;
+    border-color: #f13a19;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.btn-outline-danger:hover{
+    color:#FFFFFF;
+    background-color:#f13a19;
+}

@@ -1,0 +1,122 @@
+.page-header {
+    min-height: 72vh;
+    background-size: cover;
+    background-position: center bottom; /* ← mueve la imagen hacia arriba */
+}
+
+
+.section-description__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-description__paragph {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.studies_subsubsection {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* Imagen contenedor */
+.studie-img-container {
+    height: 400px;
+    position: relative;
+}
+
+.studie_img_engineer {
+    width: 80%;
+    position: absolute;
+    top: 50px;
+    left: 1em;
+    box-shadow: -3px 3px 4px 3px rgba(83, 77, 77, 0.65);
+    z-index: 100;
+}
+
+.studie_img_engineer img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Cita */
+.studie_tag_engineer {
+    width: 70%;
+    position: absolute;
+    bottom: 60px;
+    right: 4em;
+    color: #f13a19;
+    border: 1px solid;
+    padding: 1.5em;
+    font-style: oblique;
+    font-size: 1.1em;
+    opacity: 0.75;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Descripción */
+.studie-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.studie-title {
+    font-size: 2rem;
+    margin-bottom: 0.8em;
+    color: #333;
+}
+
+.studie-paragph {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: #555;
+}
+
+/* Niveles */
+.studies-levels {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.studie-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    display: inline-block;
+    margin: 0 2px;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid #f13a19;
+    color: #f13a19;
+}
+
+.circle.filled {
+    background-color: #f13a19;
+    color: white;
+}
+
+.btn{
+    width: 50%;
+    display: block;
+    margin: 10px auto; 
+}
+
