@@ -1,0 +1,58 @@
+{% extends 'miweb/base.html' %}
+{% load static %}
+
+{% block title %}Estudios - Edward Navarro{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/studies.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="page-header" style="background-image: url('{% static "img/universidad3.jpg" %}');"></div>
+
+<div class="container my-5">
+  <div class="section">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h1 class="section-description__title">Mis estudios</h1>
+        <p class="section-description__paragph">
+          A lo largo de mi carrera profesional he adquirido una serie de conocimientos y habilidades que considero me hacen acreedor para desempeñar un buen trabajo en cualquier rama del sector de la electrónica y las telecomunicaciones...
+        </p>
+      </div>
+    </div>
+
+    <!-- Estudio 1 -->
+    <div class="row align-items-center mb-5 studies_subsubsection">
+      <div class="col-lg-7 mb-4 mb-lg-0 studie-description">
+        <h2 class="studie-title">Ingeniero Electrónico y de Telecomunicaciones</h2>
+        <p class="studie-paragph">
+          Al ser ingeniero en este sector, poseo un conjunto de conocimientos técnicos, tanto teóricos como prácticos...
+        </p>
+
+        <div class="studies-levels">
+          <div class="studie-level">
+            <span>Electrónica</span>
+            <div class="circles">
+              <span class="circle filled">1</span>
+              <span class="circle filled">2</span>
+              <span class="circle">3</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-outline-danger mt-3" target="_blank">Ver Certificaciones</a>
+      </div>
+
+      <div class="col-lg-5 d-none d-lg-block studie-img-container">
+        <div class="studie_img_engineer img-left">
+          <img src="{% static 'img/ingenieria.jpg' %}" alt="Ingeniería">
+        </div>
+        <p class="studie_tag_engineer text-right">
+          "Los científicos estudian el mundo tal como es; los ingenieros crean el mundo que nunca ha sido"
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
