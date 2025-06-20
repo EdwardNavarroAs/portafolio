@@ -3,9 +3,43 @@
 
 {% block title %}Portafolio - Edward Navarro{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+{% endblock %}
+
 {% block content %}
-<div class="container py-5">
-  <h1 class="mb-4 text-center">Mi Portafolio</h1>
-  <p>Aquí iría el contenido detallado de mis proyectos, etc.</p>
+<div class="page-header" style="background-image: url('{% static "img/grial.jpg" %}');"></div>
+
+<div class="container">
+  <div class="section">
+
+    <!-- Título principal -->
+    <div class="row">
+      <div class="section-description col text-center">
+        <h1 class="section-description__title">Mi Portafolio</h1>
+        <p class="section-description__paragph">
+          A lo largo de mi carrera profesional he trabajado en una serie de proyectos individuales y en equipo...
+        </p>
+      </div>
+    </div>
+
+    <!-- Proyecto 1 -->
+    <div class="row mt-4 mb-4 justify-content-center">
+      <div class="col-12 col-md-10 image-container">
+        <div class="image-portfolio">
+          <img src="{% static 'img/sigfox.png' %}" alt="Proyecto SigFox">
+        </div>
+
+        <div class="image-text">
+          <h2 class="mb-3">Proyecto SigFox</h2>
+          <p>
+            SigFox es una red de acceso inalámbrico global dedicada exclusivamente a la interconexión masiva de dispositivos IoT...
+          </p>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 {% endblock %}
