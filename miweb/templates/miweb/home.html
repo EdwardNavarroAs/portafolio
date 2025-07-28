@@ -35,39 +35,41 @@
 </header>
 
 <!-- Contenido principal -->
-<div class="container py-5">
-    <!-- Sobre mí -->
-    <section class="section mb-5 text-center">
-        <div class="profile-picture scroll-fade mb-4 ">
-            <img src="{% static 'img/perfil.png' %}" alt="">
-        </div>
-        <h2 class="section-description__title">Sobre mí</h2>
-        <p class="section-description__paragph">
-            Me considero una persona responsable, respetuoso, adaptable a los cambios, con capacidad de liderazgo, adecuadas relaciones interpersonales para el trabajo en equipo, decidido al cumplimiento de mis metas, capaz de mantener un aprendizaje continuo y abierto a opiniones que me hagan mejorar no solo como profesional sino como persona.
-        </p>
-    </section>
-
-    <!-- Tarjetas -->
-    <section class="section cards d-flex flex-wrap justify-content-center gap-3">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <i class="icon icon-award-48"></i>
-                <h3 class="card-title">Estudios</h3>
-                <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
-                <a href="{% url 'estudios' %}" class="btn btn-outline-danger">Ver más</a>
+<main>
+    <div class="container py-5">
+        <!-- Sobre mí -->
+        <section class="section mb-5 text-center">
+            <div class="profile-picture scroll-fade mb-4 ">
+                <img src="{% static 'img/perfil.png' %}" alt="">
             </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <i class="icon icon-briefcase-24"></i>
-                <h3 class="card-title">Portafolio</h3>
-                <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
-                <a href="{% url 'portafolio' %}" class="btn btn-outline-danger">Ver más</a>
+            <h2 class="section-description__title">Sobre mí</h2>
+            <p class="section-description__paragph">
+                Me considero una persona responsable, respetuoso, adaptable a los cambios, con capacidad de liderazgo, adecuadas relaciones interpersonales para el trabajo en equipo, decidido al cumplimiento de mis metas, capaz de mantener un aprendizaje continuo y abierto a opiniones que me hagan mejorar no solo como profesional sino como persona.
+            </p>
+        </section>
+    
+        <!-- Tarjetas -->
+        <section class="section cards d-flex flex-wrap justify-content-center gap-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="icon icon-award-48"></i>
+                    <h3 class="card-title">Estudios</h3>
+                    <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
+                    <a href="{% url 'estudios' %}" class="btn btn-outline-danger">Ver más</a>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+    
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <i class="icon icon-briefcase-24"></i>
+                    <h3 class="card-title">Portafolio</h3>
+                    <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
+                    <a href="{% url 'portafolio' %}" class="btn btn-outline-danger">Ver más</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
 
 {% endblock %}
 

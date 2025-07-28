@@ -24,15 +24,12 @@
     <!--{# {% include 'miweb/partials/navbar.html' %} #} -->
 
     <!-- Contenido de la página específica -->
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-
+    {% block content %}{% endblock %}
+    
     <!-- Footer común -->
     {% include 'miweb/partials/footer.html' %}
 
     <!-- Scripts comunes -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>
