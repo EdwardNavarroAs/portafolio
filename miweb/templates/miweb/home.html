@@ -4,13 +4,13 @@
 {% block title %}Inicio - Edward Navarro{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}?v=107">
 {% endblock %}
 
 {% block content %}
 
 <!-- Encabezado -->
-<header class="page-header" style="background-image: url('{% static 'img/antoine-barres.jpg' %}')">
+<header class="page-header custom-header-bg">
     <div class="container">
         <div class="title-brand text-center">
             <div class="main-logo mb-3">
@@ -31,7 +31,7 @@
         </p>
     </div>
 
-    <div class="moving-clouds" style="background-image: url('{% static 'img/clouds.png' %}');"></div>
+    <div class="moving-clouds custom-cloud-bg"></div>
 </header>
 
 <!-- Contenido principal -->
