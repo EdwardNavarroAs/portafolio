@@ -54,22 +54,27 @@
         <!-- Tarjetas -->
         <section class="section cards d-flex flex-wrap justify-content-center gap-3">
             <div class="card card-fixed">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column justify-content-between">
+                <div class="text-center">
                     <i class="icon icon-award-48" aria-hidden="true"></i>
                     <h3 class="card-title">Estudios</h3>
                     <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
-                    <a href="{% url 'estudios' %}" class="btn btn-outline-danger">Ver más</a>
+                </div>
+                <a href="{% url 'estudios' %}" class="btn btn-outline-danger mt-auto">Ver más</a>
                 </div>
             </div>
+
             <div class="card card-fixed">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column justify-content-between">
+                <div class="text-center">
                     <i class="icon icon-briefcase-24" aria-hidden="true"></i>
                     <h3 class="card-title">Portafolio</h3>
                     <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
-                    <a href="{% url 'portafolio' %}" class="btn btn-outline-danger">Ver más</a>
+                </div>
+                <a href="{% url 'portafolio' %}" class="btn btn-outline-danger mt-auto">Ver más</a>
                 </div>
             </div>
-        </section>
+        </section>        
     </div>
 </main>
 

@@ -1,4 +1,5 @@
 /* ========== ENCABEZADO PRINCIPAL ========== */
+/* Estructura del header de la página de inicio */
 .page-header {
   min-height: 100vh;
   position: relative;
@@ -13,6 +14,7 @@
   overflow: hidden;
 }
 
+/* Imagen de fondo personalizada */
 .custom-header-bg {
   background-image: url('../img/antoine-barres.jpg');
   background-size: cover;
@@ -28,14 +30,16 @@
   flex-direction: column;
   align-items: center;
   animation: fadeIn 2s ease-in-out forwards;
-  position: relative; /* Para posicionar la nube dentro */
+  position: relative; /* Necesario para posicionar la nube */
 }
 
+/* Efecto de aparición suave del título */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Logo superior */
 .main-logo {
   max-width: 90px;
   margin-bottom: 1rem;
@@ -44,6 +48,7 @@
   width: 100%;
 }
 
+/* Título principal con gradiente */
 .main-title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
@@ -55,30 +60,16 @@
   margin-bottom: 1rem;
 }
 
+/* Subtítulo debajo del título principal */
 .description-subtitle {
   font-size: 1.25rem;
   font-weight: 500;
   opacity: 0.95;
 }
 
-/* Niebla izquierda y derecha */
-/* Título + nube que sube con él */
-.title-brand {
-  max-width: 730px;
-  margin: 8% auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 2s ease-in-out forwards;
-  position: relative; /* Para posicionar la nube dentro */
-}
+/* ========== EFECTOS DE NIEBLA Y NUBES ========== */
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Nube que sube con el título */
+/* Nube principal que sube con el título */
 .fog-title {
   position: absolute;
   bottom: -40px;
@@ -88,7 +79,7 @@
   z-index: 3;
 }
 
-/* Nube que aparece después (derecha) */
+/* Nube baja que aparece después, desde ambos lados */
 .fog-low {
   position: absolute;
   bottom: 0;
@@ -100,7 +91,6 @@
   z-index: 2;
   animation: fogFadeIn 3s ease-out 1s forwards;
 }
-
 .fog-low.right {
   left: auto;
   right: 0;
@@ -108,11 +98,13 @@
   margin-right: -35%;
 }
 
+/* Animación de aparición de niebla baja */
 @keyframes fogFadeIn {
   from { transform: translateY(40px); opacity: 0; }
   to   { transform: translateY(0);   opacity: 1; }
 }
 
+/* Nubes en movimiento continuo (loop horizontal) */
 .moving-clouds {
   position: absolute;
   bottom: 0;
@@ -123,19 +115,18 @@
   animation: cloudLoop 80s linear infinite;
   z-index: 1;
 }
-
 .custom-cloud-bg {
   background-image: url('../img/clouds.png');
   background-repeat: repeat-x;
   background-position: top;
   background-size: contain;
 }
-
 @keyframes cloudLoop {
   0%   { transform: translate3d(0, 0, 0); }
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
+/* Adaptación de altura para pantallas pequeñas */
 @media (max-width: 768px) {
   .moving-clouds {
     height: 300px;
@@ -143,7 +134,7 @@
   }
 }
 
-/* Accesibilidad */
+/* Accesibilidad: sin animaciones para usuarios que lo prefieren */
 @media (prefers-reduced-motion: reduce) {
   .cloudLoop,
   .moving-clouds,
@@ -152,7 +143,9 @@
   }
 }
 
-/* ========== PERFIL ========== */
+/* ========== SECCIÓN PERFIL PERSONAL ========== */
+
+/* Contenedor redondo de la foto */
 .profile-picture {
   position: relative;
   width: 180px;
@@ -166,6 +159,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Brillo al pasar el cursor */
 .profile-picture::before {
   content: "";
   position: absolute;
@@ -181,7 +175,6 @@
   transition: transform 0.5s ease-in-out;
   pointer-events: none;
 }
-
 .profile-picture:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -190,6 +183,7 @@
   transform: rotate(45deg) translateX(100%);
 }
 
+/* Imagen interior */
 .profile-picture img {
   width: 100%;
   height: 100%;
@@ -197,54 +191,92 @@
   object-position: center 10%;
 }
 
-/* ========== TARJETAS ========== */
+/* ========== TARJETAS PERSONALIZADAS ========== */
+
+.cards {
+  align-items: stretch;
+}
+
+/* Estilo base de la tarjeta */
 .card.card-fixed {
   width: 18rem;
   margin-bottom: 1.5rem;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.03); /* Línea sutil */
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   background-color: #ffffff;
-  transition: transform 0.3s ease;
-}
-.card.card-fixed:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Superposición sutil con gradiente */
+.card.card-fixed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(241, 58, 25, 0.03), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Franja decorativa en la parte superior */
+.card.card-fixed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #f13a19, #dc3545);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* Hover: animación de elevación y sombra */
+.card.card-fixed:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido de la tarjeta */
 .card-body {
+  flex: 1;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
 }
-
 .card-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 0.5rem;
   text-align: center;
 }
-
 .card-paragph {
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
   margin-bottom: 1.5rem;
 }
-
 .card-body .icon {
   font-size: 3rem;
   color: #c0392b;
   margin-bottom: 1rem;
 }
-
-.btn-outline-danger:hover {
-  transform: scale(1.03);
-  transition: transform 0.2s ease;
+.card-body .btn {
+  margin-top: auto;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* ========== EFECTOS SCROLL ========== */
+/* ========== EFECTOS SCROLL ==========
+   Se usa con JS para que los elementos aparezcan al hacer scroll */
 .scroll-fade {
   opacity: 0;
   transform: translateY(30px);
