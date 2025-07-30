@@ -4,7 +4,7 @@
 {% block title %}Inicio - Edward Navarro{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}?v=107">
+<link rel="stylesheet" href="{% static 'css/home.css' %}?v=108">
 {% endblock %}
 
 {% block content %}
@@ -14,16 +14,19 @@
     <div class="container">
         <div class="title-brand text-center">
             <div class="main-logo mb-3">
-                <img src="{% static 'img/angular2-logo.png' %}" alt="">
+                <img src="{% static 'img/angular2-logo.png' %}" alt="Logotipo personal de Edward Navarro">
             </div>
             <h1 class="main-title">Edward Navarro</h1>
 
-            <div class="fog-low">
-                <img src="{% static 'img/fog-low.png' %}" alt="">
+            <!-- Nube que sube con el título -->
+            <div class="fog-title">
+                <img src="{% static 'img/fog-low.png' %}" alt="Niebla decorativa del título">
             </div>
-            <div class="fog-low right">
-                <img src="{% static 'img/fog-low.png' %}" alt="">
-            </div>
+        </div>
+
+        <!-- Nube derecha, animación separada -->
+        <div class="fog-low right">
+            <img src="{% static 'img/fog-low.png' %}" alt="Niebla decorativa derecha">
         </div>
 
         <p class="description-subtitle text-center mt-3">
@@ -31,7 +34,7 @@
         </p>
     </div>
 
-    <div class="moving-clouds custom-cloud-bg"></div>
+    <div class="moving-clouds custom-cloud-bg" role="presentation" aria-label="Nubes en movimiento"></div>
 </header>
 
 <!-- Contenido principal -->
@@ -39,8 +42,8 @@
     <div class="container py-5">
         <!-- Sobre mí -->
         <section class="section mb-5 text-center">
-            <div class="profile-picture scroll-fade mb-4 ">
-                <img src="{% static 'img/perfil.png' %}" alt="">
+            <div class="profile-picture scroll-fade mb-4">
+                <img src="{% static 'img/perfil.png' %}" alt="Foto de perfil de Edward Navarro">
             </div>
             <h2 class="section-description__title">Sobre mí</h2>
             <p class="section-description__paragph">
@@ -50,18 +53,17 @@
     
         <!-- Tarjetas -->
         <section class="section cards d-flex flex-wrap justify-content-center gap-3">
-            <div class="card" style="width: 18rem;">
+            <div class="card card-fixed">
                 <div class="card-body">
-                    <i class="icon icon-award-48"></i>
+                    <i class="icon icon-award-48" aria-hidden="true"></i>
                     <h3 class="card-title">Estudios</h3>
                     <p class="card-paragph">Conozca más sobre los estudios y certificaciones que he realizado a lo largo de mi carrera.</p>
                     <a href="{% url 'estudios' %}" class="btn btn-outline-danger">Ver más</a>
                 </div>
             </div>
-    
-            <div class="card" style="width: 18rem;">
+            <div class="card card-fixed">
                 <div class="card-body">
-                    <i class="icon icon-briefcase-24"></i>
+                    <i class="icon icon-briefcase-24" aria-hidden="true"></i>
                     <h3 class="card-title">Portafolio</h3>
                     <p class="card-paragph">Conozca más sobre los proyectos profesionales en los que he estado involucrado.</p>
                     <a href="{% url 'portafolio' %}" class="btn btn-outline-danger">Ver más</a>

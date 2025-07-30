@@ -11,43 +11,41 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  /* conserva tus fondos inline desde template */
 }
 
 .custom-header-bg {
-    background-image: url('../img/antoine-barres.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url('../img/antoine-barres.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Contenedor del título con animación */
+/* Animación de aparición del título */
 .title-brand {
   max-width: 730px;
   margin: 8% auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out forwards;
+  position: relative; /* Para posicionar la nube dentro */
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Logo principal */
 .main-logo {
   max-width: 90px;
-  margin: 0 auto 1rem;
+  margin-bottom: 1rem;
 }
 .main-logo img {
   width: 100%;
 }
 
-/* Título con degradado y efecto responsive */
 .main-title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem); /* escala entre tamaños */
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
   background: linear-gradient(to bottom, #ffffff 65%, #4e6773 100%);
   background-clip: text;
@@ -57,15 +55,40 @@
   margin-bottom: 1rem;
 }
 
-/* Subtítulo descriptivo */
 .description-subtitle {
   font-size: 1.25rem;
   font-weight: 500;
   opacity: 0.95;
 }
 
-/* ========== DECORACIÓN DE NUBES ========== */
-/* Niebla decorativa */
+/* Niebla izquierda y derecha */
+/* Título + nube que sube con él */
+.title-brand {
+  max-width: 730px;
+  margin: 8% auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out forwards;
+  position: relative; /* Para posicionar la nube dentro */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Nube que sube con el título */
+.fog-title {
+  position: absolute;
+  bottom: -40px;
+  left: -40%;
+  width: 180%;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+/* Nube que aparece después (derecha) */
 .fog-low {
   position: absolute;
   bottom: 0;
@@ -75,34 +98,21 @@
   width: 110%;
   opacity: 0;
   z-index: 2;
-  animation: fogFadeIn 3s ease-out forwards;
+  animation: fogFadeIn 3s ease-out 1s forwards;
 }
 
-/* Variante derecha */
 .fog-low.right {
-  margin-left: 30%;
+  left: auto;
+  right: 0;
+  margin-left: 0;
+  margin-right: -35%;
 }
 
-/* Imagen de niebla */
-.fog-low img {
-  width: 100%;
-  filter: blur(2px) brightness(0.95); /* difumina un poco la niebla */
-}
-
-
-/* Animación para que aparezca suavemente */
 @keyframes fogFadeIn {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
 }
 
-/* Fondo animado de nubes */
 .moving-clouds {
   position: absolute;
   bottom: 0;
@@ -115,20 +125,25 @@
 }
 
 .custom-cloud-bg {
-    background-image: url('../img/clouds.png');
-    background-repeat: repeat-x;
-    background-position: top;
-    background-size: contain;
+  background-image: url('../img/clouds.png');
+  background-repeat: repeat-x;
+  background-position: top;
+  background-size: contain;
 }
 
-/* Animaciones */
 @keyframes cloudLoop {
-  0% { transform: translate3d(0, 0, 0); }
+  0%   { transform: translate3d(0, 0, 0); }
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
+@media (max-width: 768px) {
+  .moving-clouds {
+    height: 300px;
+    background-size: cover;
+  }
+}
 
-/* Accesibilidad: desactivar animaciones si el usuario lo prefiere */
+/* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .cloudLoop,
   .moving-clouds,
@@ -137,7 +152,7 @@
   }
 }
 
-/* ========== IMAGEN DE PERFIL ========== */
+/* ========== PERFIL ========== */
 .profile-picture {
   position: relative;
   width: 180px;
@@ -171,7 +186,6 @@
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
 .profile-picture:hover::before {
   transform: rotate(45deg) translateX(100%);
 }
@@ -183,8 +197,9 @@
   object-position: center 10%;
 }
 
-/* ========== TARJETAS (cards) ========== */
-.card {
+/* ========== TARJETAS ========== */
+.card.card-fixed {
+  width: 18rem;
   margin-bottom: 1.5rem;
   border: none;
   border-radius: 0.75rem;
@@ -192,8 +207,7 @@
   background-color: #ffffff;
   transition: transform 0.3s ease;
 }
-
-.card:hover {
+.card.card-fixed:hover {
   transform: translateY(-5px);
 }
 
@@ -225,7 +239,12 @@
   margin-bottom: 1rem;
 }
 
-/* ========== TRANSICIÓN SCROLL-FADE ========== */
+.btn-outline-danger:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+/* ========== EFECTOS SCROLL ========== */
 .scroll-fade {
   opacity: 0;
   transform: translateY(30px);
@@ -236,7 +255,7 @@
   transform: translateY(0);
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE EXTRA ========== */
 @media (min-width: 768px) {
   .main-title {
     font-size: clamp(3rem, 5vw, 4.2rem);
