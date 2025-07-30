@@ -62,6 +62,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Context processor personalizado para que el navbar funcione en todas las vistas
+                'miweb.context_processors.navbar_context',
             ],
         },
     },

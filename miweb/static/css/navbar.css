@@ -1,0 +1,65 @@
+/* Fuente y formato base */
+.navbar {
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Marca y enlaces */
+.navbar-brand {
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffffffcc;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-size: 1.1em;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-item:hover .nav-link {
+  color: #ffffffcc;
+  text-decoration: underline;
+}
+
+/* Estado activo (página actual) */
+.navbar-dark .nav-link.active {
+  color: #ffffffcc;
+  text-decoration: underline;
+}
+
+/* Enlace enfocado con teclado */
+.nav-link:focus {
+  outline: 2px dashed #ffffffaa;
+  outline-offset: 4px;
+}
+
+/* Ícono del toggler personalizado */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Botón del toggler */
+.navbar-dark .navbar-toggler {
+  border-color: #ffffff;
+}
+
+/* Fondo semitransparente personalizado */
+.bg-navbar-custom {
+  background-color: rgba(33, 37, 41, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Fondo transparente por defecto */
+.bg-transparent-custom {
+  background-color: transparent;
+}
