@@ -1,8 +1,8 @@
 /* --- Estilos base globales --- */
 html, body {
+    padding-top: 27px;
     height: 100%; /* Necesario para que flex funcione a pantalla completa */
     margin: 0;
-    padding: 0;
 }
 
 body {
@@ -17,7 +17,14 @@ body {
 }
 
 main {
-    flex: 1; /* Esto hace que el contenido ocupe todo el espacio disponible */
+    padding-top: 70px;
+    flex: 1; /* Esto hace que el contenido ocupe todo el espacio disponible */   
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 55px;
+  }
 }
 
 h1, h2, h3, h4 {

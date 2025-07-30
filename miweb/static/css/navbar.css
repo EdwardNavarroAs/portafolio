@@ -53,11 +53,6 @@
   border-color: #ffffff;
 }
 
-/* Fondo semitransparente personalizado */
-.bg-navbar-custom {
-  background-color: rgba(33, 37, 41, 0.85);
-  backdrop-filter: blur(4px);
-}
 
 /* Fondo transparente por defecto */
 .bg-transparent-custom {
