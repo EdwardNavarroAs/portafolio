@@ -1,11 +1,23 @@
 /* --- Estilos base globales --- */
+html, body {
+    height: 100%; /* Necesario para que flex funcione a pantalla completa */
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
     font-family: 'Segoe UI', Roboto, Inter, sans-serif;
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #212529;
-    margin: 0;
-    padding: 0;
+}
+
+main {
+    flex: 1; /* Esto hace que el contenido ocupe todo el espacio disponible */
 }
 
 h1, h2, h3, h4 {
@@ -16,6 +28,7 @@ h1, h2, h3, h4 {
 p {
     margin-bottom: 1rem;
 }
+
 
 /*estilos de los botones*/
 .btn-outline-danger {
