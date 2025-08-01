@@ -1,122 +1,203 @@
+/* ========== ESTILOS BASE (MÓVILES PRIMERO) ========== */
 .page-header {
-    min-height: 72vh;
-    background-size: cover;
-    background-position: center bottom; /* ← mueve la imagen hacia arriba */
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../img/universidad3.jpg');
 }
 
-
 .section-description__title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .section-description__paragph {
-    font-size: 1.1rem;
-    color: #444;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .studies_subsubsection {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+  margin: 1.5em 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Imagen contenedor */
-.studie-img-container {
-    height: 400px;
-    position: relative;
-}
-
-.studie_img_engineer {
-    width: 80%;
-    position: absolute;
-    top: 50px;
-    left: 1em;
-    box-shadow: -3px 3px 4px 3px rgba(83, 77, 77, 0.65);
-    z-index: 100;
-}
-
-.studie_img_engineer img {
-    max-width: 100%;
-    border-radius: 0.5rem;
-}
-
-/* Cita */
-.studie_tag_engineer {
-    width: 70%;
-    position: absolute;
-    bottom: 60px;
-    right: 4em;
-    color: #f13a19;
-    border: 1px solid;
-    padding: 1.5em;
-    font-style: oblique;
-    font-size: 1.1em;
-    opacity: 0.75;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Descripción */
 .studie-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .studie-title {
-    font-size: 2rem;
-    margin-bottom: 0.8em;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .studie-paragph {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: #555;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+  text-align: justify;
 }
 
-/* Niveles */
 .studies-levels {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .studie-level {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }
 
 .circles {
-    display: flex;
-    align-items: center;
+  display: flex;
+  gap: 4px;
 }
 
 .circle {
-    display: inline-block;
-    margin: 0 2px;
-    height: 22px;
-    width: 22px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 0.8rem;
-    border-radius: 50%;
-    border: 1px solid #f13a19;
-    color: #f13a19;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #f13a19;
+  color: #f13a19;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 22px;
 }
 
 .circle.filled {
-    background-color: #f13a19;
-    color: white;
+  background-color: #f13a19;
+  color: white;
 }
 
-.btn{
-    width: 50%;
-    display: block;
-    margin: 10px auto; 
+.btn {
+  width: 80%;
+  display: block;
+  margin: 1rem auto 0;
+  font-size: 1rem;
 }
+
+.studie-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.studie_img_engineer img {
+  width: 90%;
+  border-radius: 0.5rem;
+  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.studie_tag_engineer {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #f13a19;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1em;
+  border: 1px solid #f13a19;
+  width: 90%;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* ========== MEDIA QUERIES PARA PANTALLAS GRANDES ========== */
+
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 60vh;
+    background-position: center bottom;
+  }
+
+  .section-description__title {
+    font-size: 2.2rem;
+  }
+
+  .section-description__paragph {
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+
+  .studie-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .studie-paragph {
+    text-align: left;
+  }
+
+  .studie-img-container {
+    flex-direction: row;
+    position: relative;
+    height: 400px;
+    margin-top: 0;
+  }
+
+  .studie_img_engineer {
+    position: absolute;
+    top: 40px;
+    left: 1rem;
+    width: 80%;
+    z-index: 1;
+  }
+
+  .studie_img_engineer img {
+    width: 100%;
+  }
+
+  .studie_tag_engineer {
+    position: absolute;
+    bottom: 40px;
+    right: 2rem;
+    width: 70%;
+    text-align: right;
+  }
+
+  .studie-description {
+    padding: 0 2rem;
+  }
+
+  .studies_subsubsection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .studie-description,
+  .studie-img-container {
+    width: 48%;
+  }
+
+  .btn {
+    width: 60%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-description__title {
+    font-size: 2.5rem;
+  }
+
+  .section-description__paragph {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+}
+
 

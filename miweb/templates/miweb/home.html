@@ -41,11 +41,11 @@
 <main>
     <div class="container py-5">
         <!-- Sobre mí -->
-        <section class="section mb-5 text-center">
-            <div class="profile-picture scroll-fade mb-4">
+        <section class="section mb-5 text-center scroll-fade">
+            <div class="profile-picture mb-4">
                 <img src="{% static 'img/perfil.png' %}" alt="Foto de perfil de Edward Navarro">
             </div>
-            <h2 class="section-description__title">Sobre mí</h2>
+            <h2 class="section-description__title ">Sobre mí</h2>
             <p class="section-description__paragph">
                 Me considero una persona responsable, respetuoso, adaptable a los cambios, con capacidad de liderazgo, adecuadas relaciones interpersonales para el trabajo en equipo, decidido al cumplimiento de mis metas, capaz de mantener un aprendizaje continuo y abierto a opiniones que me hagan mejorar no solo como profesional sino como persona.
             </p>
@@ -78,8 +78,4 @@
     </div>
 </main>
 
-{% endblock %}
-
-{% block extra_js %}
-<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

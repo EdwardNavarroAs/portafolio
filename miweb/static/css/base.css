@@ -54,3 +54,16 @@ p {
   box-shadow: 0 3px 8px rgba(220, 53, 69, 0.3);
 }
 
+/* ========== EFECTOS SCROLL ==========
+   Se usa con JS para que los elementos aparezcan al hacer scroll */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

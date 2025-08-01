@@ -8,25 +8,25 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-header" style="background-image: url('{% static "img/universidad3.jpg" %}');"></div>
+<header class="page-header scroll-fade"></header>
 
-<div class="container my-5">
-  <div class="section">
+<main class="container my-3 scroll-fade">
+  <section class="section scroll-fade">
     <div class="row mb-4">
       <div class="col text-center">
         <h1 class="section-description__title">Mis estudios</h1>
         <p class="section-description__paragph">
-          A lo largo de mi carrera profesional he adquirido una serie de conocimientos y habilidades que considero me hacen acreedor para desempeñar un buen trabajo en cualquier rama del sector de la electrónica y las telecomunicaciones...
+          A lo largo de mi carrera profesional he adquirido una serie de conocimientos y habilidades que considero me hacen acreedor para desempeñar un buen trabajo en cualquier rama del sector de la electrónica y las telecomunicaciones.
         </p>
       </div>
     </div>
 
     <!-- Estudio 1 -->
-    <div class="row align-items-center mb-5 studies_subsubsection">
+    <div class="row align-items-center mb-5 studies_subsubsection scroll-fade">
       <div class="col-lg-7 mb-4 mb-lg-0 studie-description">
         <h2 class="studie-title">Ingeniero Electrónico y de Telecomunicaciones</h2>
         <p class="studie-paragph">
-          Al ser ingeniero en este sector, poseo un conjunto de conocimientos técnicos, tanto teóricos como prácticos...
+          Al ser ingeniero en este sector, poseo un conjunto de conocimientos técnicos, tanto teóricos como prácticos, que me permiten analizar, diseñar, implementar y mantener soluciones tecnológicas eficientes y sostenibles.
         </p>
 
         <div class="studies-levels">
@@ -43,7 +43,7 @@
         <a class="btn btn-outline-danger mt-3" target="_blank">Ver Certificaciones</a>
       </div>
 
-      <div class="col-lg-5 d-none d-lg-block studie-img-container">
+      <div class="col-lg-5 d-none d-lg-block studie-img-container scroll-fade">
         <div class="studie_img_engineer img-left">
           <img src="{% static 'img/ingenieria.jpg' %}" alt="Ingeniería">
         </div>
@@ -52,7 +52,6 @@
         </p>
       </div>
     </div>
-
-  </div>
-</div>
+  </section>
+</main>
 {% endblock %}
