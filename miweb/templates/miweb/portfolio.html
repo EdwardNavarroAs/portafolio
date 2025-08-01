@@ -8,38 +8,77 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-header" style="background-image: url('{% static "img/grial.jpg" %}');"></div>
+<header class="page-header scroll-fade" style="background-image: url('{% static "img/grial.jpg" %}');"></header>
 
-<div class="container">
-  <div class="section">
+<main class="container my-4">
+  <section class="section">
 
-    <!-- Título principal -->
-    <div class="row">
-      <div class="section-description col text-center">
+    <!-- Título de sección -->
+    <div class="row scroll-fade">
+      <div class="col text-center">
         <h1 class="section-description__title">Mi Portafolio</h1>
         <p class="section-description__paragph">
-          A lo largo de mi carrera profesional he trabajado en una serie de proyectos individuales y en equipo...
+          A lo largo de mi carrera profesional he trabajado en proyectos individuales y colaborativos aplicando distintas tecnologías.
         </p>
       </div>
     </div>
 
     <!-- Proyecto 1 -->
-    <div class="row mt-4 mb-4 justify-content-center">
-      <div class="col-12 col-md-10 image-container">
-        <div class="image-portfolio">
-          <img src="{% static 'img/sigfox.png' %}" alt="Proyecto SigFox">
-        </div>
-
-        <div class="image-text">
-          <h2 class="mb-3">Proyecto SigFox</h2>
-          <p>
-            SigFox es una red de acceso inalámbrico global dedicada exclusivamente a la interconexión masiva de dispositivos IoT...
-          </p>
-          
-        </div>
+    <div class="project-container scroll-fade">
+      <div class="project-img">
+        <img src="{% static 'img/sigfox.png' %}" alt="Proyecto SigFox">
+      </div>
+      <div class="project-info">
+        <h2 class="portfolio-title">Proyecto SigFox</h2>
+        <p class="portfolio-paragph">
+          SigFox es una red de acceso inalámbrico global dedicada a la interconexión masiva de dispositivos IoT. En este proyecto diseñé una arquitectura de sensores de bajo consumo conectados vía esta red.
+        </p>
+        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
       </div>
     </div>
 
-  </div>
-</div>
+    <!-- Proyecto 2 (reverse) -->
+    <div class="project-container reverse scroll-fade">
+      <div class="project-img">
+        <img src="{% static 'img/django-project.png' %}" alt="Proyecto Web Django">
+      </div>
+      <div class="project-info">
+        <h2 class="portfolio-title">Proyecto Web con Django</h2>
+        <p class="portfolio-paragph">
+          Desarrollo de una aplicación web profesional usando Django, HTML5, CSS3 y JS plano. Incluye autenticación, administración de contenido y despliegue en servidor.
+        </p>
+        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
+      </div>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="project-container scroll-fade">
+      <div class="project-img">
+        <img src="{% static 'img/mobile-app.png' %}" alt="App Móvil Híbrida">
+      </div>
+      <div class="project-info">
+        <h2 class="portfolio-title">App Móvil Híbrida</h2>
+        <p class="portfolio-paragph">
+          Aplicación móvil híbrida desarrollada con Ionic y Angular para seguimiento de actividades físicas. Sincroniza datos con Firebase y posee interfaz amigable.
+        </p>
+        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
+      </div>
+    </div>
+
+    <!-- Proyecto 4 (reverse - ejemplo adicional) -->
+    <div class="project-container reverse scroll-fade">
+      <div class="project-img">
+        <img src="{% static 'img/ejemplo-proyecto.png' %}" alt="Otro Proyecto">
+      </div>
+      <div class="project-info">
+        <h2 class="portfolio-title">Nombre del Proyecto</h2>
+        <p class="portfolio-paragph">
+          Breve descripción del proyecto adicional, tecnologías usadas y propósito general.
+        </p>
+        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
+      </div>
+    </div>
+
+  </section>
+</main>
 {% endblock %}
