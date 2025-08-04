@@ -36,6 +36,12 @@ p {
     margin-bottom: 1rem;
 }
 
+strong {
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
 
 /*estilos de los botones*/
 .btn-outline-danger {

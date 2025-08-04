@@ -16,9 +16,13 @@
 .section-description__paragph {
   font-size: 1rem;
   color: #444;
-  text-align: center;
+  text-align: justify; /* Antes estaba en center */
   padding: 0 1rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
+
+
 
 .studies_subsubsection {
   margin: 1.5em 0;
@@ -161,10 +165,6 @@
     text-align: left;
   }
 
-  .studie-paragph {
-    text-align: left;
-  }
-
   .studie-img-container {
     align-items: flex-start;
     margin-top: 0;
@@ -197,6 +197,26 @@
   .studie-img-container {
     width: 48%;
   }
+
+    /* Zigzag para estudios */
+  .studies_subsubsection.reverse-lg {
+    flex-direction: row-reverse;
+  }
+
+    .studies_subsubsection.reverse-lg .studie-title {
+    text-align: right;
+  }
+
+  .studies_subsubsection.reverse-lg .studie-paragph {
+    text-align: justify;
+  }
+
+  .studies_subsubsection.reverse-lg .studie_tag_engineer {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+  }
+
 
   .btn {
     width: 60%;
