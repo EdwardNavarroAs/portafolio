@@ -2,7 +2,8 @@
 .page-header {
   min-height: 82vh;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-image: url("../img/grial.jpg");
 }
 
 /* ===== MOBILE FIRST ===== */
