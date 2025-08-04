@@ -113,8 +113,22 @@
   opacity: 0.9;
 }
 
-/* ========== MEDIA QUERIES PARA PANTALLAS GRANDES ========== */
+/*estilos para el tooltip que ocurre cuando se haga hover sobre un nivel de estudio específico*/
+.tooltip-tooltip {
+  position: absolute;
+  background-color: #f13a19;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: opacity 0.1s ease-in-out;
+}
 
+/* ========== MEDIA QUERIES PARA PANTALLAS GRANDES ========== */
 @media (min-width: 768px) {
   .page-header {
     min-height: 60vh;
@@ -200,4 +214,9 @@
   }
 }
 
+@media (max-width: 767px) {
+  .tooltip-tooltip {
+    display: none !important;
+  }
+}
 
