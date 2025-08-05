@@ -10,7 +10,6 @@
 {% block content %}
 <header class="page-header scroll-fade"></header>
 
-
 <main class="container my-4">
   <section class="section">
 
@@ -25,7 +24,7 @@
     </div>
 
     <!-- Proyecto 1 -->
-    <div class="project-container scroll-fade">
+    <article class="project-container scroll-fade">
       <div class="project-img">
         <img src="{% static 'img/sigfox.png' %}" alt="Proyecto SigFox">
       </div>
@@ -36,10 +35,10 @@
         </p>
         <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
       </div>
-    </div>
+    </article>
 
     <!-- Proyecto 2 (reverse) -->
-    <div class="project-container reverse scroll-fade">
+    <article class="project-container reverse scroll-fade">
       <div class="project-img">
         <img src="{% static 'img/django-project.png' %}" alt="Proyecto Web Django">
       </div>
@@ -50,35 +49,7 @@
         </p>
         <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
       </div>
-    </div>
-
-    <!-- Proyecto 3 -->
-    <div class="project-container scroll-fade">
-      <div class="project-img">
-        <img src="{% static 'img/mobile-app.png' %}" alt="App Móvil Híbrida">
-      </div>
-      <div class="project-info">
-        <h2 class="portfolio-title">App Móvil Híbrida</h2>
-        <p class="portfolio-paragph">
-          Aplicación móvil híbrida desarrollada con Ionic y Angular para seguimiento de actividades físicas. Sincroniza datos con Firebase y posee interfaz amigable.
-        </p>
-        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
-      </div>
-    </div>
-
-    <!-- Proyecto 4 (reverse - ejemplo adicional) -->
-    <div class="project-container reverse scroll-fade">
-      <div class="project-img">
-        <img src="{% static 'img/ejemplo-proyecto.png' %}" alt="Otro Proyecto">
-      </div>
-      <div class="project-info">
-        <h2 class="portfolio-title">Nombre del Proyecto</h2>
-        <p class="portfolio-paragph">
-          Breve descripción del proyecto adicional, tecnologías usadas y propósito general.
-        </p>
-        <a class="btn btn-outline-danger mt-3" href="#" target="_blank">Ver más</a>
-      </div>
-    </div>
+    </article>
 
   </section>
 </main>
